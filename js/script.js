@@ -90,15 +90,15 @@ document.addEventListener("click", function(e) {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("button-search-form").tabIndex = "3";
+  document.getElementById("button-search-form").tabIndex = "0";
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("search-1024-form__btn-submit").tabIndex = "3";
+  document.getElementById("search-1024-form__btn-submit").tabIndex = "0";
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("search-1024-form__btn-close").tabIndex = "3";
+  document.getElementById("search-1024-form__btn-close").tabIndex = "0";
 });
 
 
@@ -192,25 +192,25 @@ const choices = new Choices(element, {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("gallery__choices").tabIndex = "6";
+  document.getElementById("gallery__choices").tabIndex = "0";
   });
 
 
 
 // gallery-checkbox
-window.addEventListener('DOMContentLoaded', function() {
-  $('.gallery__checkbox-item__checkbox').change(function(){
-    $('input[name="' + $(this).attr('name') +'"]').removeAttr('checked');
-    $(this).prop('checked', true);
-  });
-});
+// window.addEventListener('DOMContentLoaded', function() {
+//   $('.gallery__checkbox-item__checkbox').change(function(){
+//     $('input[name="check' + $(this).attr('name') +'"]').removeAttr('checked');
+//     $(this).prop('checked', true);
+//   });
+// });
 
 document.querySelectorAll('.gallery__checkbox-item__label').forEach(function(input1){
   input1.addEventListener('click', function(e){
     const path = e.currentTarget.dataset.path;
 
-document.querySelectorAll('.gallery__checkbox-item__label').forEach(function(label){
-  label.classList.remove('gallery__checkbox-item__label-active')});
+document.querySelectorAll('.gallery__checkbox-item__label').forEach(function(text){
+  text.classList.remove('gallery__checkbox-item__label-active')});
   e.currentTarget.classList.add('gallery__checkbox-item__label-active');
 
 document.querySelector(`[data-target="${path}"]`).classList.add('gallery__checkbox-item__label-active');
@@ -220,23 +220,12 @@ document.querySelector(`[data-target="${path}"]`).classList.add('gallery__checkb
 
 document.addEventListener("click", function(e2) {
   let target = e2.target;
-  if (target.closest(".gallery__container__first__checkbox__label")) {
-    document.querySelectorAll(".gallery__checkbox-item__label").forEach(ell => {
+  if (target.closest(".gallery__checkbox-item__label")) {
+    document.querySelectorAll(".gallery__checkbox-item__label__text").forEach(ell => {
         ell.classList.remove("gallery__checkbox-item__label-active");
     });
   }
 });
-
-
-// document.querySelectorAll('.gallery__checkbox-item__label').forEach(function(){
-// $('.gallery__checkbox-item__label').find('input[type=checkbox]').change(function() {
-//   if (this.checked)
-//     $(this).parent().addClass('gallery__checkbox-item__label-active');
-//   else
-//     $(this).parent().removeClass('gallery__checkbox-item__label-active');
-// });
-// });
-
 
 
 
@@ -309,18 +298,18 @@ const swiper2 = new Swiper('.gallery-swiper', {
     init: function () {
       this.slides.forEach((slide) => {
         if (!slide.classList.contains("slide-visible")) {
-          slide.tabIndex = "8";
+          slide.tabIndex = "0";
         } else {
-          slide.tabIndex = "8";
+          slide.tabIndex = "0";
         }
       });
     },
     slideChange: function () {
       this.slides.forEach((slide) => {
         if (!slide.classList.contains("slide-visible")) {
-          slide.tabIndex = "8";
+          slide.tabIndex = "0";
         } else {
-          slide.tabIndex = "8";
+          slide.tabIndex = "0";
         }
       });
     },
@@ -367,13 +356,13 @@ document.addEventListener('keyup', function() {console.log(document.activeElemen
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-document.getElementById("accordion__list__item__title-1").tabIndex = "9";
-document.getElementById("accordion__list__item__title-2").tabIndex = "9";
-document.getElementById("accordion__list__item__title-3").tabIndex = "9";
-document.getElementById("accordion__list__item__title-4").tabIndex = "9";
-document.getElementById("accordion__list__item__title-5").tabIndex = "9";
-document.getElementById("accordion__list__item__title-6").tabIndex = "9";
-document.getElementById("accordion__list__item__title-7").tabIndex = "9";
+document.getElementById("accordion__list__item__title-1").tabIndex = "0";
+document.getElementById("accordion__list__item__title-2").tabIndex = "0";
+document.getElementById("accordion__list__item__title-3").tabIndex = "0";
+document.getElementById("accordion__list__item__title-4").tabIndex = "0";
+document.getElementById("accordion__list__item__title-5").tabIndex = "0";
+document.getElementById("accordion__list__item__title-6").tabIndex = "0";
+document.getElementById("accordion__list__item__title-7").tabIndex = "0";
 });
 
 
@@ -637,18 +626,18 @@ const swiper4 = new Swiper('.projects__partners__swiper', {
     init: function () {
       this.slides.forEach((slide) => {
         if (!slide.classList.contains("slide-visible")) {
-          slide.tabIndex = "15";
+          slide.tabIndex = "0";
         } else {
-          slide.tabIndex = "15";
+          slide.tabIndex = "0";
         }
       });
     },
     slideChange: function () {
       this.slides.forEach((slide) => {
         if (!slide.classList.contains("slide-visible")) {
-          slide.tabIndex = "15";
+          slide.tabIndex = "0";
         } else {
-          slide.tabIndex = "15";
+          slide.tabIndex = "0";
         }
       });
     },
@@ -760,7 +749,7 @@ function init(){
     };
 
     window.addEventListener('DOMContentLoaded', function() {
-      document.getElementById("custom_geo-map").tabIndex = "19";
+      document.getElementById("custom_geo-map").tabIndex = "0";
     });
 
   })
